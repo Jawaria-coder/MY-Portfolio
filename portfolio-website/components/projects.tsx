@@ -150,13 +150,14 @@ function ProjectCard({ project, idx }: { project: (typeof projects)[0]; idx: num
                   </Button>
                 </a>
               )}
-              {project.live && project.live !== "#" && (
+              {project.live && (
                 <a href={project.live} target="_blank" rel="noopener noreferrer">
                   <Button
-                    size="lg"
-                    className="glow-button h-14 px-8 rounded-2xl gap-2 bg-primary text-primary-foreground font-bold transition-transform hover:scale-105 hover:shadow-lg"
+                    variant="secondary"
+                    size="icon"
+                    className="rounded-xl h-10 w-10 bg-primary text-primary-foreground transition-transform hover:scale-110 hover:shadow-lg"
                   >
-                    Live Experience <ExternalLink size={20} />
+                    <ExternalLink size={18} />
                   </Button>
                 </a>
               )}
