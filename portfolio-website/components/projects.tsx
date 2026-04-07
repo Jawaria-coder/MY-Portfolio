@@ -56,7 +56,7 @@ const projects = [
     image: "/uniworth-mern.png",
     tech: ["Node.js", "MongoDB", "Bootstrap", "JS"],
     github: "https://github.com/Jawaria-coder/UniWorth-Clone",
-    live: "https://github.com/Jawaria-coder/UniWorth-Clone",
+    live: "#",
   },
   {
     title: "School Management",
@@ -66,7 +66,7 @@ const projects = [
     image: "/school-mng.png",
     tech: ["Java", "JavaFX", "OOP", "File Handling"],
     github: "https://github.com/Jawaria-coder/School-Managment-System",
-    live: "https://github.com/Jawaria-coder/School-Managment-System",
+    live: "#",
   },
 ]
 
@@ -206,7 +206,7 @@ function ProjectCard({ project, idx }: { project: (typeof projects)[0]; idx: num
               </Button>
             </a>
           )}
-          {project.live && (
+          {project.live && project.live !== "#" && (
             <a href={project.live} target="_blank" rel="noopener noreferrer">
               <Button
                 size="lg"
