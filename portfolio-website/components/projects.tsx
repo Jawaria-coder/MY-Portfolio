@@ -9,6 +9,16 @@ import Image from "next/image"
 
 const projects = [
   {
+    title: "MultiSense",
+    category: "AI / Healthcare",
+    description:
+      "AI-powered platform for preliminary ASD and ADHD screening using facial-image analysis and questionnaires. Includes a DeiT3 Vision Transformer achieving 94.76% accuracy, risk prediction, uncertainty estimation, and result storage.",
+    image: "/multisense.PNG",
+    tech: ["Next.js", "Python", "PyTorch", "MongoDB"],
+    github: "https://github.com/Jawaria-coder/FYP-MultiSense",
+    live: "",
+  },
+  {
     title: "VibeGuard Website",
     category: "HealthTech / MERN",
     description:
@@ -22,11 +32,21 @@ const projects = [
     title: "Expenso App",
     category: "Finance / Flutter",
     description:
-      "Flutter mobile app using Firebase. Includes income/expense tracking, budget alerts, and WhatsApp sharing features.",
+      "Flutter mobile app using Firebase. Includes income and expense tracking, budget alerts, and WhatsApp sharing features.",
     image: "/mobile-finance-app-ui.png",
     tech: ["Flutter", "Firebase", "Dart", "APIs"],
     github: "https://github.com/Jawaria-coder/Expenso",
     live: "https://expenso-app.vercel.app/",
+  },
+  {
+    title: "AI Opportunity Radar",
+    category: "AI Automation / n8n",
+    description:
+      "An n8n workflow that discovers, verifies, validates, deduplicates, and saves relevant opportunities, with Calendar reminders for confirmed deadlines.",
+    image: "/ai-opportunity-radar.PNG",
+    tech: ["n8n", "Gemini", "Tavily", "Google Sheets"],
+    github: "https://github.com/Jawaria-coder/AI-opportunity-radar-n8n",
+    live: "",
   },
   {
     title: "Amazon Clone",
@@ -42,7 +62,7 @@ const projects = [
     title: "Backup Solutions System",
     category: "Security / Python",
     description:
-      "Python-based secure backup management system with AES encryption and decryption. Supports automated and manual backups, data restoration, real-time notifications, local and remote storage, job scheduling, and database version control.",
+      "Python-based secure backup management system with AES encryption and decryption. Supports automated and manual backups, data restoration, notifications, job scheduling, and database version control.",
     image: "/desktop-software-ui.png",
     tech: ["Python", "AES Encryption", "Scheduling", "File Handling"],
     github: "https://github.com/Jawaria-coder/Safe-Sync-Backup-Solutions-",
@@ -54,19 +74,19 @@ const projects = [
     description:
       "Complete e-commerce landing page clone with a full admin panel for order management and user registration.",
     image: "/uniworth-mern.png",
-    tech: ["Node.js", "MongoDB", "Bootstrap", "JS"],
+    tech: ["Node.js", "MongoDB", "Bootstrap", "JavaScript"],
     github: "https://github.com/Jawaria-coder/UniWorth-Clone",
-    live: "#",
+    live: "",
   },
   {
     title: "School Management",
     category: "Education / Java",
     description:
-      "JavaFX desktop application focusing on student/staff management, library systems, and scholarship tracking using OOP.",
+      "JavaFX desktop application focusing on student and staff management, library systems, and scholarship tracking using object-oriented programming.",
     image: "/school-mng.png",
     tech: ["Java", "JavaFX", "OOP", "File Handling"],
     github: "https://github.com/Jawaria-coder/School-Managment-System",
-    live: "#",
+    live: "",
   },
 ]
 
@@ -150,13 +170,14 @@ function ProjectCard({ project, idx }: { project: (typeof projects)[0]; idx: num
                   </Button>
                 </a>
               )}
-              {project.live && project.live !== "#" && (
+              {project.live && (
                 <a href={project.live} target="_blank" rel="noopener noreferrer">
                   <Button
-                    size="lg"
-                    className="glow-button h-14 px-8 rounded-2xl gap-2 bg-primary text-primary-foreground font-bold transition-transform hover:scale-105 hover:shadow-lg"
+                    variant="secondary"
+                    size="icon"
+                    className="rounded-xl h-10 w-10 bg-primary text-primary-foreground transition-transform hover:scale-110 hover:shadow-lg"
                   >
-                    Live Experience <ExternalLink size={20} />
+                    <ExternalLink size={18} />
                   </Button>
                 </a>
               )}
@@ -205,7 +226,7 @@ function ProjectCard({ project, idx }: { project: (typeof projects)[0]; idx: num
               </Button>
             </a>
           )}
-          {project.live && (
+          {project.live && project.live !== "#" && (
             <a href={project.live} target="_blank" rel="noopener noreferrer">
               <Button
                 size="lg"
