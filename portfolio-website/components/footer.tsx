@@ -16,7 +16,7 @@ export function Footer() {
 
           <div className="flex gap-6">
             <a
-              href="https://github.com/Jawaria-coder?tab=repositories"
+              href="https://github.com/Jawaria-coder"
               target="_blank"
               className="hover:text-primary transition-colors"
               rel="noreferrer"
